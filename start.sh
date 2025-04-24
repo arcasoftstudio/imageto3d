@@ -7,7 +7,7 @@ echo "🔧 Installazione dipendenze di sistema..."
 apt update && apt install -y \
     git wget unzip python3 python3-pip
 
-echo "🐍 Installazione dipendenze Python..."
+echo "🐍 Installazione dipendenze Python generali..."
 pip3 install --upgrade pip
 pip3 install -r /workspace/imageto3d/requirements.txt
 
@@ -17,10 +17,9 @@ mkdir -p /workspace/outputs
 
 echo "📥 Clono Gaussian Splatting..."
 git clone https://github.com/graphdeco-inria/gaussian-splatting.git /workspace/gsplat
-cd /workspace/gsplat
-pip install torch numpy imageio pyyaml tqdm matplotlib opencv-python
 
-
+echo "🐍 Installo librerie Gaussian Splatting..."
+pip3 install torch numpy imageio pyyaml tqdm matplotlib opencv-python
 
 echo "🚀 Avvio FastAPI..."
 cd /workspace/imageto3d
