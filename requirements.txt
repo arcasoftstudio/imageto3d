@@ -1,14 +1,20 @@
+# -------------------------------
 # API & Web
+# -------------------------------
 fastapi
 uvicorn
 aiofiles
 python-multipart
 
+# -------------------------------
 # 3D & Visualizzazione
+# -------------------------------
 open3d
 trimesh
 
-# Utils & AI support
+# -------------------------------
+# Utils & AI Support
+# -------------------------------
 numpy
 scipy
 pillow
@@ -16,3 +22,9 @@ matplotlib
 tqdm
 pyyaml
 imageio
+opencv-python
+
+# -------------------------------
+# Deep Learning (base)
+# -------------------------------
+torch>=2.0.0
