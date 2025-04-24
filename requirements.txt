@@ -1,2 +1,18 @@
+# API & Web
 fastapi
 uvicorn
+aiofiles
+python-multipart
+
+# 3D & Visualizzazione
+open3d
+trimesh
+
+# Utils & AI support
+numpy
+scipy
+pillow
+matplotlib
+tqdm
+pyyaml
+imageio
