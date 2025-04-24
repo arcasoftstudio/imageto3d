@@ -3,16 +3,18 @@
 set -e
 export DEBIAN_FRONTEND=noninteractive
 
-# ✅ Installa Python e pip
-apt update && apt install -y python3 python3-pip unzip
+echo "🔧 Installazione dipendenze di sistema..."
+apt update && apt install -y \
+    git wget unzip python3 python3-pip
 
-# ✅ Installa dipendenze Python
+echo "🐍 Installazione dipendenze Python..."
 pip3 install --upgrade pip
-pip3 install -r requirements.txt
+pip3 install -r /workspace/imageto3d/requirements.txt
 
-# ✅ Crea directory se mancano
+echo "📂 Preparazione directory output..."
 mkdir -p /workspace/uploads
 mkdir -p /workspace/outputs
 
-# ✅ Avvia FastAPI
+echo "🚀 Avvio FastAPI..."
+cd /workspace/imageto3d
 uvicorn app.main:app --host 0.0.0.0 --port 8000
