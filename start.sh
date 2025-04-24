@@ -18,7 +18,8 @@ mkdir -p /workspace/outputs
 echo "📥 Clono Gaussian Splatting..."
 git clone https://github.com/graphdeco-inria/gaussian-splatting.git /workspace/gsplat
 cd /workspace/gsplat
-pip install -r requirements.txt
+pip install torch numpy imageio pyyaml tqdm matplotlib opencv-python
+
 
 
 echo "🚀 Avvio FastAPI..."
