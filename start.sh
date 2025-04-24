@@ -15,6 +15,12 @@ echo "📂 Preparazione directory output..."
 mkdir -p /workspace/uploads
 mkdir -p /workspace/outputs
 
+echo "📥 Clono Gaussian Splatting..."
+git clone https://github.com/graphdeco-inria/gaussian-splatting.git /workspace/gsplat
+cd /workspace/gsplat
+pip install -r requirements.txt
+
+
 echo "🚀 Avvio FastAPI..."
 cd /workspace/imageto3d
 uvicorn app.main:app --host 0.0.0.0 --port 8000
